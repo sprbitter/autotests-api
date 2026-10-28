@@ -10,11 +10,11 @@ class File(TypedDict):
     Описание структуры файла.
     """
     id: str
-    url: str
     filename: str
     directory: str
+    url: str
 
-class CreateFileRequestDict(TypedDict):
+class  CreateFileRequestDict(TypedDict):
     """
     Описание структуры запроса на создание файла.
     """
