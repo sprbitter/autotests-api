@@ -3,8 +3,8 @@ from httpx import Response
 from typing import TypedDict
 
 from clients.files.files_client import File
-from clients.private_http_builder import AuthenticationUserDict, get_private_http_client
-from clients.users.private_users_client import User
+from clients.private_http_builder import AuthenticationUserSchema, get_private_http_client
+from clients.users.private_users_client import Users
 
 
 class Course(TypedDict):
@@ -108,5 +108,5 @@ class CoursesClient(APIClient):
         response = self.create_course_api(request)
         return response.json()
 
-def get_courses_client(user: AuthenticationUserDict) -> CoursesClient:
+def get_courses_client(user: AuthenticationUserSchema) -> CoursesClient:
     return CoursesClient(client=get_private_http_client(user))
