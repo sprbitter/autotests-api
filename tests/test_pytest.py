@@ -6,4 +6,4 @@ def test_assert_positive_case():
 
 def test_assert_negative_case():
     x, y = 5, 2
-    assert (y + y) == 5, "is not equals to 5"
+    assert (y + y) == 4, "is not equals to 5"

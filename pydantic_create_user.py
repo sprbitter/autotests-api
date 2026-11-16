@@ -1,15 +1,3 @@
-"""
-{
-  "user": {
-    "id": "string",
-    "email": "user@example.com",
-    "lastName": "string",
-    "firstName": "string",
-    "middleName": "string"
-  }
-}
-"""
-
 from pydantic import BaseModel, EmailStr, Field
 
 
